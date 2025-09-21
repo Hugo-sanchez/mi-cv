@@ -1,0 +1,131 @@
+
+:root{
+  --bg: #0b1020;
+  --card: rgba(255,255,255,0.08);
+  --text: #e6e9ef;
+  --muted: #9aa3b2;
+  --accent: #6ee7b7;
+  --accent-2: #60a5fa;
+  --shadow: 0 20px 30px rgba(0,0,0,.35);
+  --radius: 18px;
+}
+
+:root.light{
+  --bg: #f7f9fc;
+  --card: rgba(255,255,255,0.9);
+  --text: #0b1020;
+  --muted: #495468;
+  --accent: #2563eb;
+  --accent-2: #10b981;
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% -20%, #1b264b 10%, transparent 40%),
+    radial-gradient(1000px 600px at 110% 10%, #0a3a2a 10%, transparent 40%),
+    linear-gradient(180deg, #0b1020 0%, #0b1020 100%);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+.container{
+  width:min(1250px, 92vw);
+  margin-inline:auto;
+}
+
+.header{
+  position: sticky; top: 0; z-index: 40;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,0));
+  padding: 20px 0;
+}
+.header .bar{
+  display:flex; align-items:center; gap:20px; justify-content:space-between;
+}
+.logo{
+  display:flex; align-items:center; gap:20px; font-weight:700; letter-spacing:.3px;
+}
+.logo img{ width:28px; height:28px }
+.nav{
+  display:flex; gap:20px; flex-wrap:wrap;
+}
+.button, button, .chip{
+  appearance:none; border:0; cursor:pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color:#0b1020; padding:10px 14px; border-radius: 999px;
+  font-weight:700; box-shadow: var(--shadow); transition: transform .08s ease, box-shadow .2s ease, filter .15s ease;
+}
+.button:is(:hover, :focus-visible){ transform: translateY(-1px); filter:brightness(1.05); }
+.button.ghost{
+  background: transparent; color: var(--text); border:1px solid rgba(255,255,255,.18);
+  box-shadow:none;
+}
+.button.ghost:hover{ background: rgba(255,255,255,.06); }
+
+.hero{
+  display:grid; grid-template-columns: minmax(0,1.4fr) minmax(0,.8fr);
+  gap:28px; align-items:center; padding: 36px 0 8px;
+}
+@media (max-width: 900px){
+  .hero{ grid-template-columns:1fr; text-align:center; }
+  .stats{ justify-content:center; }
+}
+.card{
+  background: var(--card); border:1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.hero .card{ padding: 28px; }
+.hero h1{ margin:0 0 6px; font-size: clamp(28px, 4vw, 42px); }
+.hero p{ margin:0 0 18px; color:var(--muted)}
+
+.badges{ display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 18px; }
+.chip{
+  background: rgba(255,255,255,.12); color:var(--text); font-weight:600; padding:8px 12px;
+  border:1px solid rgba(255,255,255,.18);
+}
+
+.stats{
+  display:flex; gap:14px; flex-wrap:wrap; margin-top: 6px;
+}
+.stat{
+  padding:14px 18px; border-radius: 16px; background: rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.14); min-width: 120px; text-align:center;
+}
+.stat b{ display:block; font-size:22px; }
+
+.avatar{
+  display:grid; place-items:center;
+  padding: 18px;
+}
+.avatar img{
+  width:min(260px, 70%); aspect-ratio: 1; border-radius:28px;
+  border:1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.06);
+}
+
+.section{ padding: 28px 0; }
+.section h2{ margin:0 0 12px; font-size: clamp(22px, 3.2vw, 32px); }
+.grid{ display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
+.col-6{ grid-column: span 6; } .col-4{ grid-column: span 4; } .col-12{ grid-column: span 12; }
+@media (max-width: 900px){
+  .col-6, .col-4{ grid-column: span 12; }
+}
+
+.item{ padding:18px; }
+.item h3{ margin:0 0 6px; font-size:18px; }
+
+.skill{ display:flex; align-items:center; gap:10px; }
+.bar{ height:10px; background:rgba(255,255,255,.14); border-radius:999px; overflow:hidden; }
+.fill{ height:100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+
+.projects{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:14px; }
+.project{ padding:16px; display:flex; flex-direction:column; gap:12px; }
+.project a{ color: var(--text); text-decoration:none; font-weight:700; }
+.project .tags{ display:flex; gap:8px; flex-wrap:wrap; }
+
+.footer{ padding: 30px 0 40px; color: var(--muted); text-align:center; }
+.small{ font-size: 12px; color: var(--muted); }

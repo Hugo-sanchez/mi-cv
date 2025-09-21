@@ -1,0 +1,200 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Hugo</title>
+  <meta name="description" content="Currículum moderno y responsive">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div>
+      <div class="logo">
+        <img src="assets/favicon.svg" alt="logo">
+        <span>Hugo Sanchez</span>
+      </div>
+      <nav class="nav">
+        <a class="button ghost" href="#sobre-mi">Sobre mí</a>
+        <a class="button ghost" href="#experiencia">Experiencia</a>
+        <a class="button ghost" href="#proyectos">Proyectos</a>
+        <a class="button ghost" href="#contacto">Contacto</a>
+        <button id="modeToggle" class="button"><b>☀️</b> Modo claro</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <h1>Hola, soy Sanchez Leyva <span style="background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;">Hugo</span> 👋</h1>
+        <p>Tecnico Especialista en redes —  Apasionado(a) por crear productos y experiencias digitales con impacto.</p>
+
+        <div class="badges">
+          <span class="chip">#Frontend</span>
+          <span class="chip">#Backend</span>
+          <span class="chip">#UX</span>
+          <span class="chip">#IA</span>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><b>5+</b><span>Años de experiencia</span></div>
+          <div class="stat"><b>25</b><span>Proyectos</span></div>
+          <div class="stat"><b>8</b><span>Clientes</span></div>
+        </div>
+
+        <div style="display:flex; gap:30px; flex-wrap:wrap; margin-top:25px;">
+          <a class="button" href="cv.pdf" download>⬇️ Descargar CV (PDF)</a>
+          <a class="button ghost" href="#proyectos">🚀 Ver proyectos</a>
+          <a class="button ghost" href="mailto:tucorreo@correo.com">✉️ Enviar correo</a>
+        </div>
+      </div>
+
+      <div class="avatar card">
+        <img src="assets/avatar.svg" alt="avatar">
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section">
+      <h2>Sobre mí</h2>
+      <div class="grid">
+        <div class="col-6 card item">
+          <p></b>Profesional motivado y proactivo, con habilidades en
+Redes de telecomunicaciones y experiencia en
+paginas web, Redes, Mantenimiento de equipos,
+buscando integrarme a un equipo dinámico donde
+pueda aportar mis conocimientos y crecer
+profesionalmente.</b></p>
+          <p class="small"><code></code></p>
+        </div>
+        <div class="col-6 card item">
+          <div class="skill">
+            <span style="min-width:120px;">JavaScript</span>
+            <div class="bar" style="flex:1"><div class="fill" style="width:45%"></div></div>
+          </div>
+          <div class="skill">
+            <span style="min-width:120px;">HTML/CSS</span>
+            <div class="bar" style="flex:1"><div class="fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill">
+            <span style="min-width:120px;">Python</span>
+            <div class="bar" style="flex:1"><div class="fill" style="width:50%"></div></div>
+          </div>
+          <div class="skill">
+            <span style="min-width:120px;">UI/UX</span>
+            <div class="bar" style="flex:1"><div class="fill" style="width:35%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section">
+      <h2>Experiencia</h2>
+      <div class="grid">
+        <div class="col-6 card item">
+          <h3>Empresa Ultranet — <span class="small">Cargo (2020 — Presente)</span></h3>
+          <ul>
+            <li>SubDirector.</li>
+            <li>Instalación y  mantenimiento  de equipos de Internet.</li>
+            <li>Instalación de torres  autosoportadas.</li>
+            <li>Instalación de ont/modem Wi-Fi.</li>
+          </ul>
+        </div>
+        <div class="col-6 card item">
+          <h3>Empresa Grupo Palmma — <span class="small">Cargo (2010 — 2012)</span></h3>
+          <ul>
+            <li>Mantenimiento de pergolas & palapas.</li>
+            <li>cabo(Jefe de area).</li>
+            <li>restauracón de pisos y barandales.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section">
+      <h2>Proyectos destacados</h2>
+      <div class="projects">
+        <article class="card project">
+          <div class="small">2025 • Web</div>
+          <a href="#" target="_blank" rel="noopener">Landing de producto</a>
+          <p>Rediseño completo con foco en conversión y performance (LCP &lt; 1.5s).</p>
+          <div class="tags">
+            <span class="chip">React</span><span class="chip">Vite</span><span class="chip">SEO</span>
+          </div>
+        </article>
+        <article class="card project">
+          <div class="small">2024 • Data</div>
+          <a href="#" target="_blank" rel="noopener">Dashboard analítico</a>
+          <p>KPIs en tiempo real, alertas y exportaciones CSV/PDF.</p>
+          <div class="tags">
+            <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">ECharts</span>
+          </div>
+        </article>
+        <article class="card project">
+          <div class="small">2023 • Mobile</div>
+          <a href="#" target="_blank" rel="noopener">App de hábitos</a>
+          <p>Gamificación, notificaciones push y modo offline-first.</p>
+          <div class="tags">
+            <span class="chip">Kotlin</span><span class="chip">Firebase</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Educación</h2>
+      <div class="grid">
+        <div class="col-6 card item">
+          <h3>Universidad Instituto Tecnológico Superios de Felipe Carrilo Puerto — <span class="small">Ingeniería en Sistemas Computacionales</span></h3>
+          <p>2022 — 2025 • Cursando • Becario(a)</p>
+        </div>
+        <div class="col-6 card item">
+          <h3>Certificaciones</h3>
+          <ul>
+            <li>Certificación MOCC 1 — 2024</li>
+            <li>Certificación Mocc 2 — 2023</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <div class="grid">
+        <div class="col-6 card item">
+          <p><b>Email:</b> <span id="emailText">ultranet.red@gmail.com</span></p>
+          <p><b>Tel:</b> +521 983 809 02 34</p>
+          <p><b>Ubicación:</b> Ciudad Felipe Carrillo Puerto Qroo, México</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+            <a class="button" href="mailto:tucorreo@correo.com">Escríbeme</a>
+            <button id="copyEmail" class="button ghost">Copiar</button>
+            <a class="button ghost" href="https://github.com/Hugo-sanchez/mi-cv" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="button ghost" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="col-6 card item">
+          <form action="mailto:tucorreo@correo.com" method="post" enctype="text/plain">
+            <label>Nombre<br><input required style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:var(--text)"></label><br><br>
+            <label>Email<br><input required type="email" style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:var(--text)"></label><br><br>
+            <label>Mensaje<br><textarea rows="4" style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:var(--text)"></textarea></label><br><br>
+            <button class="button">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Hecho con ❤️ — © <span id="year"></span> Hugo Sanchez Leyva
+      <div class="small">Recuerda lucha por lo que quieres y lo obtendras , es cuestion de paciencia.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
